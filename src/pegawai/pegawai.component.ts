@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Pegawai} from '../shared/pegawai';
+import { Pegawai } from '../shared/pegawai';
 
 @Component({
   selector: 'app-pegawai',
@@ -7,12 +7,13 @@ import {Pegawai} from '../shared/pegawai';
   styleUrls: ['./pegawai.component.css']
 })
 export class PegawaiComponent implements OnInit {
-  daftarPegawai:Pegawai[]=[];
+  daftarPegawai:Pegawai[] = [];
   nama = '';
   nip = '';
   alamat = '';
   jk = '';
   pegawai;
+
   constructor() { }
 
   ngOnInit() {
@@ -21,11 +22,10 @@ export class PegawaiComponent implements OnInit {
   tambahPegawai(){
     this.pegawai = new Pegawai(this.nama,this.nip,this.alamat,this.jk);
     this.daftarPegawai.push(this.pegawai);
-    this.nama= '';
-    this.nip= '';
-    this.alamat= '';
-    this.jk= '';
-
+    this.nama = '';
+    this.nip = '';
+    this.alamat = '';
+    this.jk = '';
   }
 
 }
